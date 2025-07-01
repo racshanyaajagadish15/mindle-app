@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindle Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mindle Dashboard</h1>
+      <p class="subtitle">Your mindful browsing insights</p>
+    </header>
+    
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>Today's Pages</h3>
+        <p id="today-pages">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Focus Time</h3>
+        <p id="total-focus">0 min</p>
+      </div>
+      <div class="stat-card">
+        <h3>Last Focus Session</h3>
+        <p id="last-focus">0 min</p>
+      </div>
+      <div class="stat-card">
+        <h3>Relaxation Breaks</h3>
+        <p id="relax-breaks">0</p>
+      </div>
+    </div>
+    
+    <div class="chart-container">
+      <h2>Weekly Focus Time</h2>
+      <canvas id="focus-chart"></canvas>
+    </div>
+    
+    <div class="chart-container">
+      <h2>Visited Pages</h2>
+      <div class="pages-list" id="pages-list">
+        <!-- Pages will be inserted here -->
+      </div>
+    </div>
+  </div>
+  
+  <script src="chart.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

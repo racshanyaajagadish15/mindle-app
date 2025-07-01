@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindle</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div id="main-view">
+      <header>
+        <h1>Mindle</h1>
+        <p class="subtitle">Mindful browsing companion</p>
+      </header>
+
+      <div class="stats-container">
+        <div class="stat-card">
+          <h3>Today's Pages</h3>
+          <p id="page-count">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Focus Time</h3>
+          <p id="focus-time">0 min</p>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <button id="focus-btn" class="btn-purple">
+          <span id="focus-btn-text">Start Focus</span>
+        </button>
+        <button id="breathing-btn" class="btn-outline">Breathing Exercise</button>
+      </div>
+
+      <div class="relaxation-settings">
+        <h3>Relaxation Reminders</h3>
+        <div class="input-group">
+          <select id="relaxation-interval">
+            <option value="0">Off</option>
+            <option value="20">Every 20 minutes</option>
+            <option value="30">Every 30 minutes</option>
+            <option value="45">Every 45 minutes</option>
+            <option value="60">Every hour</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="dashboard-btn" class="btn-text">
+        View Dashboard &rarr;
+      </button>
+    </div>
+
+    <div id="breathing-view" class="hidden">
+      <div class="breathing-header">
+        <button id="back-btn" class="btn-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="#6A3093" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <h2>Breathing Exercise</h2>
+      </div>
+      
+      <div class="animation-container">
+        <div class="circle" id="breathing-circle"></div>
+        <div class="prompt" id="breathing-prompt">Ready to begin</div>
+      </div>
+      
+      <div class="controls">
+        <button id="start-btn" class="btn-purple">Start</button>
+        <button id="pause-btn" class="btn-outline" disabled>Pause</button>
+      </div>
+      
+      <div class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+          <li>Find a comfortable position</li>
+          <li>Follow the animation</li>
+          <li>Breathe in through your nose</li>
+          <li>Exhale through your mouth</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

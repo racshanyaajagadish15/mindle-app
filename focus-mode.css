@@ -1,0 +1,26 @@
+.focus-mode {
+  position: relative;
+}
+
+.focus-mode::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(106, 48, 147, 0.05);
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.focus-mode *:not(.focus-whitelist) {
+  filter: blur(2px) grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.focus-mode .focus-whitelist {
+  filter: none !important;
+  position: relative;
+  z-index: 9999;
+}
